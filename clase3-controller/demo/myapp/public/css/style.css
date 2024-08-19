@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(194, 221, 221);
+}
+
+a {
+  color: #ffffff;
+}
+
+header{
+  background-color: black;
+  color: white;
+  height: 100px;
+}
+
+
+ul{
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+img{
+  width: 30px;
+}

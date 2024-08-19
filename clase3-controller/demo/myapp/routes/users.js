@@ -1,16 +1,11 @@
 var express = require('express');
 var router = express.Router();
+/* requerimos el controller del recurso */
+const usersController = require('../controllers/usersController')
 
 /* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('devuelve todos los usuarios registrados');
-});
+router.get('/', usersController.index);
 
-router.get('/nombre/:nombre', function(req, res) {
-  let nombreCapturado = req.params.nombre;
-  return res.send("Hola, " + nombreCapturado);
-})
-
-
+router.get('/nombre/:nombre', usersController.saludarPorNombre)
 
 module.exports = router;

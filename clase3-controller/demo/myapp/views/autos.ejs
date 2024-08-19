@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <h1><%= texto %></h1>
+
+    <section>
+        <ol>
+           <% for( let i = 0; i < listado.length; i++ ) { %>
+            <li>marca: <a href="/autos/filtrarPorMarca/<%= listado[i].marca %>"><%= listado[i].marca %></a> </li>
+            <li>modelo: <%= listado[i].modelo %></li>
+            <li>año: <%= listado[i].anio %></li>
+            <li>color: <%= listado[i].color %></li>
+            <hr>
+           <% } %>
+        </ol>
+    </section>
+</body>
+</html>
