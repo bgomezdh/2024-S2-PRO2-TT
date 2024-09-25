@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <ol>
+     
+      <li>
+        <h2>
+          Titulo:
+          <a href="/bandas/id/<%= banda.id %>">
+            <%= banda.nombre %></a
+          >
+        </h2>
+        <img src="/<%= banda.cover%>" alt="" width="300" srcset="" />
+        <p>Genero: <%= banda.genero %></p>
+        <p>Integrantes:<%= banda.integrantes %></p>
+        <a href="<%= banda.video  %>">Ver en Youtube</a>
+      </li>
+     
+    </ol>
+  </body>
+</html>

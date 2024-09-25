@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Nombre: <%= banda.nombre %></li>
+        <li>integrantes: <%= banda.integrantes %></li>
+        <li>genero: <%= banda.genero %></li>
+        <li>video: <a href="<%= banda.video %>" target="_blank" rel="noopener noreferrer">Ver video</a></li>
+
+        <ul>
+            <% for( let i = 0; i < banda.topCanciones.length; i++ ) { %>
+            
+                    <li><%= banda.topCanciones[i] %></li>
+                
+            <% } %>
+        </ul>
+        <li>cover: <img src="/images/<%= banda.cover %>" alt=""></li>
+    </ul>
+</body>
+</html>

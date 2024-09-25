@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bandas</h1>
+    <% for( let i = 0; i < bandas.length; i++ ) { %>
+    
+        <ul>
+            <li>nombre: <a href="/bandas/id/<%= bandas[i].id %>"><%= bandas[i].nombre %></a></li>
+            <li>genero:<%= bandas[i].genero %></li>
+            <img src="/images/<%= bandas[i].cover %>" alt="">
+        </ul>
+    
+    <% } %>
+    <p></p>
+</body>
+</html>

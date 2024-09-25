@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <ol>
+      <% for( let i = 0; i < miLista.length; i++ ) { %>
+      <li>
+        <h2>
+          Titulo:
+          <a href="/bandas/id/<%= miLista[i].id %>">
+            <%= miLista[i].nombre %></a
+          >
+        </h2>
+        <img src="/<%= miLista[i].cover%>" alt="" width="300" srcset="" />
+        <p>Genero: <%= miLista[i].genero %></p>
+        <p>Integrantes:<%= miLista[i].integrantes %></p>
+        <a href="<%= miLista[i].video  %>">Ver en Youtube</a>
+      </li>
+      <% } %>
+    </ol>
+  </body>
+</html>
