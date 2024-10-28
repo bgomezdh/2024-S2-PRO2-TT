@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+
+  <body>
+
+    <%- include('./partials/header') %>
+    
+    <main class="container main-container">
+      <div class="card mb-3 list-group-item" style="max-width: 540px;" >
+        <div class="row g-0 tarjeta">
+          <div class="col-md-4 cont-logo">
+
+            <!-- Imagen real de la pelicula -->
+            <img src="/images/movies/logo-netflix.png" class="img-fluid rounded-start" alt="...">
+
+           
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Title: <%= movie.title %></h5>
+              <p class="card-text">Rating: <%= movie.rating %></p>
+              <p class="card-text">Awards: <%= movie.awards %></p>
+              <p class="card-text">Release Date: <%= movie.release_date %></p>
+              <p class="card-text"><small class="text-muted">length : <%= movie.length %></small></p>
+              <hr>
+              <!-- genero -->
+              <p class="card-text">Genre: <a href="/genres/id/">Drama</a> </p>
+
+              <hr>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

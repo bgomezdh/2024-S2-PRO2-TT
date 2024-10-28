@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <main class="container main-container">
+
+      <!-- Formulario de Registro -->
+
+      <form class="form" action="/users/login" method="POST" >
+        <div class="title">Ingresar</div>
+     
+        <div class="input-container ic1">
+            <input id="email" class="input" type="email" name="email" placeholder="email" />
+        </div>
+
+        <div class="input-container ic1">
+            <input id="password" class="input" type="password" name="password" placeholder="Clave" />
+        </div>
+
+       
+        <button type="text" class="submit">Ingresar</button>
+      </form>
+    </main>
+  </body>
+</html>
