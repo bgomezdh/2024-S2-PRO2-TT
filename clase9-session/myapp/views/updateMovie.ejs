@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <% if (locals.user != undefined) { %>
+      <%- include('./partials/headerLogueado') %>
+     <% } else { %>
+      <%- include('./partials/header') %>
+    <% } %>
+    <main class="container main-container">
+     
+       
+          
+            <!-- Formulario de Registro -->
+
+            <form class="form" action="/movies/update" method="POST">
+              <div class="title">Actualizar Pelicula</div>
+
+              <input type="hidden" name="id" value="<%= movie.id %>">
+              
+              <div class="input-container ic1">
+                <input id="title" class="input" type="text" name="title" placeholder="Titulo" value="<%= movie.title %>" />
+              </div>
+              <div class="input-container ic2">
+                <input id="rating" class="input" type="number" name="rating" placeholder="Rating" min="0" max="10" value="<%= movie.rating %>"/>
+              </div>
+              <div class="input-container ic2">
+                <input id="lastname" class="input" type="number" name="awards" placeholder="Premios" min="0" max="100" value="<%= movie.awards %>" />
+              </div>
+              <div class="input-container ic2">
+                  <input id="duracion" class="input" type="number" name="length" placeholder="Duración en Min" value="<%= movie.length %>" min="10" max="250"/>
+              </div>
+                <div class="input-container ic2">
+                  <select class="seleccion" name="genre_id" id="genero">
+                      <option value="1" selected>Comedia</option>
+                      <option value="2">Terror</option>
+                      <option value="3">Drama</option>
+                      <option value="4">Accion</option>
+                  </select>
+                </div>
+              <button type="text" class="submit">Actualizar</button>
+  
+  
+            </form>
+            
+
+      
+    </main>
+  </body>
+</html>

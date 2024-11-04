@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+
+  <body>
+
+    <% if (locals.user != undefined) { %>
+      <%- include('./partials/headerLogueado') %>
+     <% } else { %>
+      <%- include('./partials/header') %>
+    <% } %>
+
+
+  
+    <h1 class="index-title">Bienvenidos al Index</h1>
+
+    <section class="sec-index">
+        <img src="/images/portada.jpg" alt="protada">
+    </section>
+  </body>
+</html>

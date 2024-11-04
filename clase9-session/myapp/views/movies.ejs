@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+<body>
+  
+  <% if (locals.user != undefined) { %>
+    <%- include('./partials/headerLogueado') %>
+   <% } else { %>
+    <%- include('./partials/header') %>
+  <% } %>
+
+  <main>
+    <section class="section-detalle-busqueda flex-box-c">
+      <h2>Todas la Peliculas</h2>
+
+
+      <section class="section-playlist">
+
+        <ol class="flex-box-c">
+
+          <% for( let i = 0; i < listaPeliculas.length; i++ ) { %>
+          <!-- aqui debe ir un for -->
+          <li class="li">
+            <a href="/movies/id/<%= listaPeliculas[i].id %>"> <%= listaPeliculas[i].title %></a> 
+            <div class="btns-movies">
+                <a href="/movies/update/<%= listaPeliculas[i].id  %>" class="btn-special btn-blue">Modificar</a>
+                <form action="" method="post">
+                  <input type="hidden" name="id" value="1000">
+                  <button class="btn-special btn-red" type="submit">Eliminar</button>
+                </form>
+            </div>
+          
+          </li>
+          <% } %>
+          
+          
+
+            
+        </ol>
+
+      </section>
+
+
+    </section>
+  </main>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<header id="header">
+    <div class="contenedora">
+      <a href="/" class="itemContenedora">
+        <img src="/images/logo.png" alt="Soda Estereo" id="logo" /></a>
+
+      <nav class="menuIndex itemContenedora">
+        <ul>
+          <li>
+            <a href="/movies" title="Todas las Películas">Todos</a>
+          </li>
+           <li>
+            <a href="/movies/register" title="Crear Pelicula">Crear</a>
+          </li>
+          <li>
+            <a href="/users/perfil" title="Perfil Usuario"><%= locals.user.email %></a>
+          </li>
+
+          <li>
+            <form action="/users/logout" method="post">
+              <button type="submit">Logout</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="itemContenedora">
+        <form action="/movies/busqueda" class="lineHov" method="GET" >
+          <input type="text" name="pelicula" placeholder="buscar" value="" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="color: black;"></i>
+          </button>
+          <p class="alert"></p>
+        </form>
+      </section>
+    </div>
+  </header>

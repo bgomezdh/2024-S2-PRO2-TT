@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <% if (locals.user != undefined) { %>
+      <%- include('./partials/headerLogueado') %>
+     <% } else { %>
+      <%- include('./partials/header') %>
+    <% } %>
+    <main class="container main-container">
+
+     <!-- Formulario de Registro -->
+     <!-- crear action y method -->
+     <!-- crear name de los inputs -->
+
+      <form class="form" action="/users/register" method="post" >  
+        <div class="title">Registrate</div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="text" placeholder="name" name="name" />
+      </div>
+        <div class="input-container ic1">
+            <input id="email" class="input" type="email" placeholder="email" name="email" />
+        </div>
+
+        <div class="input-container ic1">
+            <input id="password" class="input" type="password" placeholder="Clave" name="password" />
+        </div>
+        <button type="submit" class="submit">Crear</button>
+      </form>
+
+    </main>
+  </body>
+</html>
